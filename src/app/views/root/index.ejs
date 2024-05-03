@@ -7,7 +7,7 @@
 		<title>IRLcup</title>
 	</head>
 	<body>
-		<h1 align="center">IRLcup</h1>
+		<h1 align="center">IRLcup (BETA)</h1>
 			
 		<table align="center" border="2px">
 			<tr>
@@ -25,21 +25,25 @@
 					<td rowspan="2"><%= players[i].name %></td>
 					
 					<td><%= players[i].competitors[0].name %></td>
-					<td>Výsledek</td>
+					<td id="<%= players[i].competitors[0].result %>">
+						<div align="center">
+							<button id="competitionStatus" onclick="changeState(<%= i %>, 0)">Change</button>
+						</div>
+					</td>
 					
 					<td rowspan="2"><%= players[i].points %></td>
 					<td rowspan="2"><%= players[i].result %></td>
 					
-					<td rowspan="2">
+					<td>
 						<div align="center">
-							<button id="removePlayerButton" onclick="removePlayer()">-</button>
+							<button id="removePlayerButton" onclick="removePlayer(<%= i %>)">-</button>
 						</div>
 					</td>
-				</td>
 				</tr>
 				<tr>
 					<td><%= players[i].competitors[1].name %></td>
-					<td>Výsledek</td>
+					<td id="<%= players[i].competitors[1].result %>">
+					</td>
 				</tr>
 			<% } %>
 			<tr>
@@ -60,6 +64,10 @@
 			</td>
 			</tr>
 		</table>
+		
+		<div align="center">
+			<button id="Start" onclick="startRound()">Start</button>
+		</div>
 		
 		<script src="../js/main.js"></script>
 	</body>

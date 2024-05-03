@@ -4,6 +4,26 @@ const mainController = require('../controllers/mainController');
 
 mainRouter.get(['/', '/index'], mainController.index);
 
+mainRouter.post('/addPlayer', (req, res) => {
+	mainController.addPlayer(req);
+	
+	res.send(true);
+});
+
+mainRouter.post('/startRound', (req, res) => {
+	mainController.startRound();
+	
+	res.send(true);
+});
+
+mainRouter.post('/changeState', (req, res) => {
+	mainController.changeState(req, res);
+});
+
+mainRouter.post('/removePlayer', (req, res) => {
+	mainController.removePlayer(req, res);
+});
+
 mainRouter.get('*', (req, res) => {
 	res.send('Error 404');
 });

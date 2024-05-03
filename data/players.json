@@ -1,37 +1,93 @@
 {
-	"0": {
-		"name": "Tester",
-		"competitors": {
-				"0":{
-					"name": "Creeper",
-					"result": false
-				},
-				"1":{
-					"name": "Zombie",
-					"result": false
-				},
-				"next_id": 2
-		},
-		"points": 0,
-		"result": "NE"
-		
-	},
-	"1": {
-		"name": "retseT",
-		"competitors": {
-				"0":{
-					"name": "repeerC",
-					"result": false
-				},
-				"1":{
-					"name": "eibmoZ",
-					"result": false
-				},
-				"next_id": 2
-		},
-		"points": 0,
-		"result": "NE"
-		
-	},
-	"next_id": 2
+    "0": {
+        "name": "Brajen",
+        "competitors": {
+            "0": {
+                "name": "Asd",
+                "result": true
+            },
+            "1": {
+                "name": "Papír",
+                "result": false
+            }
+        },
+        "points": 1,
+        "result": "2. Fáze"
+    },
+    "1": {
+        "name": "Lucy",
+        "competitors": {
+            "0": {
+                "name": "Papír",
+                "result": true
+            },
+            "1": {
+                "name": "DSA",
+                "result": false
+            }
+        },
+        "points": 1,
+        "result": "2. Fáze"
+    },
+    "2": {
+        "name": "Dumbo",
+        "competitors": {
+            "0": {
+                "name": "DSA",
+                "result": true
+            },
+            "1": {
+                "name": "Asd",
+                "result": false
+            }
+        },
+        "points": 1,
+        "result": "2. Fáze"
+    },
+    "3": {
+        "name": "Papír",
+        "competitors": {
+            "0": {
+                "name": "Brajen",
+                "result": true
+            },
+            "1": {
+                "name": "Lucy",
+                "result": false
+            }
+        },
+        "points": 1,
+        "result": "2. Fáze"
+    },
+    "4": {
+        "name": "Asd",
+        "competitors": {
+            "0": {
+                "name": "Dumbo",
+                "result": true
+            },
+            "1": {
+                "name": "Brajen",
+                "result": false
+            }
+        },
+        "points": 1,
+        "result": "2. Fáze"
+    },
+    "5": {
+        "name": "DSA",
+        "competitors": {
+            "0": {
+                "name": "Lucy",
+                "result": true
+            },
+            "1": {
+                "name": "Dumbo",
+                "result": false
+            }
+        },
+        "points": 1,
+        "result": "2. Fáze"
+    },
+    "next_id": 6
 }
