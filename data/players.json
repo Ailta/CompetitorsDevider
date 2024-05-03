@@ -1,0 +1,37 @@
+{
+	"0": {
+		"name": "Tester",
+		"competitors": {
+				"0":{
+					"name": "Creeper",
+					"result": false
+				},
+				"1":{
+					"name": "Zombie",
+					"result": false
+				},
+				"next_id": 2
+		},
+		"points": 0,
+		"result": "NE"
+		
+	},
+	"1": {
+		"name": "retseT",
+		"competitors": {
+				"0":{
+					"name": "repeerC",
+					"result": false
+				},
+				"1":{
+					"name": "eibmoZ",
+					"result": false
+				},
+				"next_id": 2
+		},
+		"points": 0,
+		"result": "NE"
+		
+	},
+	"next_id": 2
+}

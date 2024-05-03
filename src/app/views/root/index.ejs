@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>IRLcup</title>
+	</head>
+	<body>
+		<h1 align="center">IRLcup</h1>
+			
+		<table align="center" border="2px">
+			<tr>
+				<th>Číslo</th>
+				<th>Jméno</th>
+				<th>Protivník</th>
+				<th>Výsledek</th>
+				<th>Počet bodů</th>
+				<th>Postupuje</th>
+				<th></th>
+			</tr>
+			<% for (let i = 0; i < players.next_id; i++) { %>
+				<tr>
+					<td rowspan="2"><%= i %></td>
+					<td rowspan="2"><%= players[i].name %></td>
+					
+					<td><%= players[i].competitors[0].name %></td>
+					<td>Výsledek</td>
+					
+					<td rowspan="2"><%= players[i].points %></td>
+					<td rowspan="2"><%= players[i].result %></td>
+					
+					<td rowspan="2">
+						<div align="center">
+							<button id="removePlayerButton" onclick="removePlayer()">-</button>
+						</div>
+					</td>
+				</td>
+				</tr>
+				<tr>
+					<td><%= players[i].competitors[1].name %></td>
+					<td>Výsledek</td>
+				</tr>
+			<% } %>
+			<tr>
+				<td></td>
+				<td><input type="text" id="playerName"  placeholder="Jméno hráče"></td>
+				
+				<td></td>
+				<td></td>
+				
+				<td></td>
+				<td></td>
+				
+				<td>
+					<div align="center">
+						<button id="removePlayerButton" onclick="addPlayer()">+</button>
+					</div>
+				</td>
+			</td>
+			</tr>
+		</table>
+		
+		<script src="../js/main.js"></script>
+	</body>
+</html>
