@@ -226,3 +226,28 @@ function countPoints(player, competitorId) {
 	
 	return player;
 }
+
+exports.getResults = () => {
+	const db = new jsondb('../data/results.json');
+	if (!db.has('next_id')) {
+    db.set('next_id', 0);
+	}
+	results = db.JSON();
+
+	return results;
+}
+
+exports.saveRound = (nameOfSave) => {
+	const db = new jsondb('../data/results.json');
+	const dbRound = new jsondb('../data/players.json');
+	if (!db.has('next_id')) {
+    db.set('next_id', 0);
+	}
+	let next_id = db.get('next_id');
+
+	db.set(next_id, {"name": nameOfSave, "data": dbRound.JSON()});
+	db.set('next_id', next_id-(-1));
+	db.sync();
+
+	return true;
+}

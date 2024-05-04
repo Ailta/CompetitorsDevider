@@ -1,13 +1,13 @@
 {
     "0": {
-        "name": "Test",
+        "name": "Tester2",
         "competitors": {
             "0": {
-                "name": "Test3",
+                "name": "Petr",
                 "result": "Lost"
             },
             "1": {
-                "name": "Test4",
+                "name": "Sunset",
                 "result": "Win"
             }
         },
@@ -15,44 +15,44 @@
         "result": "2. Fáze"
     },
     "1": {
-        "name": "Test2",
+        "name": "Petr",
         "competitors": {
             "0": {
-                "name": "Test4",
+                "name": "Winter",
                 "result": "Lost"
             },
             "1": {
-                "name": "Test3",
-                "result": "Lost"
+                "name": "Tester2",
+                "result": "Win"
             }
         },
-        "points": 0,
-        "result": "Ne"
+        "points": 1,
+        "result": "2. Fáze"
     },
     "2": {
-        "name": "Test3",
+        "name": "Winter",
         "competitors": {
             "0": {
-                "name": "Test2",
-                "result": "Win"
-            },
-            "1": {
-                "name": "Test",
-                "result": "Win"
-            }
-        },
-        "points": 2,
-        "result": "Play-Off"
-    },
-    "3": {
-        "name": "Test4",
-        "competitors": {
-            "0": {
-                "name": "Test",
+                "name": "Sunset",
                 "result": "Lost"
             },
             "1": {
-                "name": "Test2",
+                "name": "Petr",
+                "result": "Win"
+            }
+        },
+        "points": 1,
+        "result": "2. Fáze"
+    },
+    "3": {
+        "name": "Sunset",
+        "competitors": {
+            "0": {
+                "name": "Tester2",
+                "result": "Lost"
+            },
+            "1": {
+                "name": "Winter",
                 "result": "Win"
             }
         },

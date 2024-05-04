@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link type="text/css" rel="stylesheet" href="../css/main.css"/>
+		<title>IRLcup</title>
+	</head>
+	<body>
+		<div class="content">
+			<header>
+				<div align="center">
+					<img src="../img/0_0.png" alt="Logo"> 
+				</div>
+				<nav>
+					<a href="/">Momentální výsledky</a>
+					<a href="/results" class="onPage">Všechny výsledky</a>
+					<a href="/edit">Upravit</a>
+				</nav> 
+			</header>
+			<div>
+				<% for (let x = 0; x < rounds.next_id; x++) {%>
+					<div align="center">
+						<label><%= rounds[x].name %></label>
+						<table border="2px">
+							<tr>
+								<th>Číslo</th>
+								<th>Jméno</th>
+								<th>Protivník</th>
+								<th>Výsledeky</th>
+								<th>Počet bodů</th>
+								<th>Postupuje</th>
+							</tr>
+							<% for (let i = 0; i < rounds[x].data.next_id; i++) { %>
+								<tr>
+									<td rowspan="2"><%= i %></td>
+									<td rowspan="2"><%= rounds[x].data[i].name %></td>
+									
+									<td><%= rounds[x].data[i].competitors[0].name %></td>
+									<td id="status-<%= rounds[x].data[i].competitors[0].result %>">
+									</td>
+									
+									<td rowspan="2"><%= rounds[x].data[i].points %></td>
+									<td rowspan="2"><%= rounds[x].data[i].result %></td>
+								</tr>
+								<tr>
+									<td><%= rounds[x].data[i].competitors[1].name %></td>
+									<td id="status-<%= rounds[x].data[i].competitors[1].result %>">
+									</td>
+								</tr>
+							<% } %>
+						</table>
+					</div>
+				<% } %>
+			</div>
+		</div> 
+		<script src="../js/main.js"></script>
+	</body>
+</html>

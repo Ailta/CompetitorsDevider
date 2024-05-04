@@ -8,6 +8,10 @@ exports.edit = (req, res) => {
 	res.render('root/edit', {players: modelPlayers.getPlayers()});
 }
 
+exports.results = (req, res) => {
+	res.render('root/results', {rounds: modelPlayers.getResults()});
+}
+
 exports.addPlayer = (req) => {
 	modelPlayers.addPlayer(req.body.playerName);
 }
@@ -22,4 +26,9 @@ exports.startRound = () => {
 
 exports.changeState = (req, res) => {
 	res.send(modelPlayers.changeState(req.body.playerId, req.body.competitorId));
+}
+
+exports.saveRound = (req, res) => {
+	console.log(req.body);
+	res.send(modelPlayers.saveRound(req.body.nameOfSave));
 }

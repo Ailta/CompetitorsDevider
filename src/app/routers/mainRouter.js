@@ -6,6 +6,8 @@ mainRouter.get(['/', '/index'], mainController.index);
 
 mainRouter.get(['/edit'], mainController.edit);
 
+mainRouter.get(['/results'], mainController.results);
+
 mainRouter.post('/addPlayer', (req, res) => {
 	mainController.addPlayer(req);
 	
@@ -24,6 +26,10 @@ mainRouter.post('/changeState', (req, res) => {
 
 mainRouter.post('/removePlayer', (req, res) => {
 	mainController.removePlayer(req, res);
+});
+
+mainRouter.post('/saveRound', (req, res) => {
+	mainController.saveRound(req, res);
 });
 
 mainRouter.get('*', (req, res) => {

@@ -1,4 +1,5 @@
 html, body {
+	width: 100%;
 	height: 100%;
 }
 
@@ -10,12 +11,22 @@ body {
 	background-color: rgb(21,30,34);
 }
 
+.content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 0.5fr 1fr; 
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
+	padding-left: auto;
+	padding-right: auto;
+	width: 100%;
+	height: 100%;
+}
+
+
+
 header {
-	position: absolute;
-	bottom: 70%;
-	top: 0;
-	right: 0;
-	left: 0;
+	grid-area: 1 / 1 / 2 / 2;
 	margin: 0px;
 	padding-top: 5vh;
 	padding-bottom: 5vh;
@@ -26,18 +37,11 @@ header > div > img {
 	height: 20vh;
 }
 
-body > div {
-	position: absolute;
-	bottom: 0;
-	top: 30%;
-	right: 0;
-	left: 0;
+.content > div {
+	grid-area: 2 / 1 / 3 / 2;
 	background-color: white;
 	
 	padding-top: 10vh;
-	padding-bottom: auto;
-	padding-left: 10vw;
-	padding-right: 10vw;
 }
 
 h1 {
@@ -46,7 +50,7 @@ h1 {
 
 table {
 	text-align: center;
-	margin-top: 5vh;
+	margin-bottom: 20px;
 }
 
 nav {
@@ -65,9 +69,18 @@ a {
 	transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+a.onPage {
+	background-color: #b32b29;
+	color: #fff;
+}
+
 a:hover {
   background-color: #b32b29;
   color: #fff;
+}
+
+label {
+	
 }
 
 #status-Win {
