@@ -13,7 +13,7 @@ Tady se to rozdělí na dva způsoby jak to nainstalovat a spustit.
 Toto je automatizovanější způsob instalace a spuštění.
 Druhý existuje pro to kdyby to nešlo automaticky.
 
-1.Po extrahování spusťte install.bat který obsahuje tyto příkazi:
+1.Po extrahování spusťte *install.bat* který obsahuje tyto příkazi:
 ```
 start /WAIT "." node-v22.1.0-x64.msi
 cd ./src/
@@ -21,7 +21,7 @@ npm install
 ```
 Až se vám ukáže světlé okno, tak stačí klikat na next a pak install.
 
-2.Pak stačí jen spustit run.bat který obsahuje tyto příkazi:
+2.Pak stačí jen spustit *run.bat* který obsahuje tyto příkazi:
 ```
 cd ./src/
 npm run dev
@@ -32,13 +32,14 @@ npm run dev
 
 ### 2.Způsob Instalace a spuštění
 Kdyby z nějakého důvodu ten první způsob nešel, tak se to musí udělat více manuálně.
-1. Spusťte soubor s názvem: node-v22.1.0-x64.msi
+1. Spusťte soubor *node-v22.1.0-x64.msi*
 2. Jen to odklikejte, stačí klikat na next a pak install.
-3. Po instalaci node.js je potřeba nainstalovat balíčky.
-4. Stačí vlízt do adresáře src a nahoře jak je cesta do adresáře tak tam stačí kliknout a napsat "/cmd".
+3. Po instalaci *node.js* je potřeba nainstalovat balíčky.
+4. Stačí vlízt do adresáře src a nahoře jak je cesta do adresáře tak tam stačí kliknout a napsat za to vše "/cmd".
 ![image](https://github.com/Ailta/CompetitorsDevider/assets/29490877/eeab511a-65e9-4fcc-9e87-0c1aaba56492)
 
-5. Otevře se příkazová řádka, tam jen stačí napsat "npm install" a pak "npm run dev".
+5. Otevře se příkazová řádka, tam jen stačí napsat *"npm install"*.
+6. Po dokončení předchozího příkazu stačí napsat *"npm run dev"*.
 
 ### Konec
 A na konec, v konzoli se vypíše > http://localhost:6060
