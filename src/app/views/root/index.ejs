@@ -4,71 +4,50 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link type="text/css" rel="stylesheet" href="../css/main.css"/>
 		<title>IRLcup</title>
 	</head>
 	<body>
-		<h1 align="center">IRLcup (BETA)</h1>
-			
-		<table align="center" border="2px">
-			<tr>
-				<th>Číslo</th>
-				<th>Jméno</th>
-				<th>Protivník</th>
-				<th>Výsledek</th>
-				<th>Počet bodů</th>
-				<th>Postupuje</th>
-				<th></th>
-			</tr>
-			<% for (let i = 0; i < players.next_id; i++) { %>
+		<header>
+			<div align="center">
+				<img src="../img/0_0.png" alt="Logo"> 
+			</div>
+			<nav>
+				<a href="/">Main</a>
+				<a href="/results">Výsledky kol</a>
+				<a href="/edit">Edit</a>
+			</nav> 
+		</header>
+		<div>
+			<table align="center" border="2px">
 				<tr>
-					<td rowspan="2"><%= i %></td>
-					<td rowspan="2"><%= players[i].name %></td>
-					
-					<td><%= players[i].competitors[0].name %></td>
-					<td id="<%= players[i].competitors[0].result %>">
-						<div align="center">
-							<button id="competitionStatus" onclick="changeState(<%= i %>, 0)">Change</button>
-						</div>
-					</td>
-					
-					<td rowspan="2"><%= players[i].points %></td>
-					<td rowspan="2"><%= players[i].result %></td>
-					
-					<td>
-						<div align="center">
-							<button id="removePlayerButton" onclick="removePlayer(<%= i %>)">-</button>
-						</div>
-					</td>
+					<th>Číslo</th>
+					<th>Jméno</th>
+					<th>Protivník</th>
+					<th>Výsledek</th>
+					<th>Počet bodů</th>
+					<th>Postupuje</th>
 				</tr>
-				<tr>
-					<td><%= players[i].competitors[1].name %></td>
-					<td id="<%= players[i].competitors[1].result %>">
-					</td>
-				</tr>
-			<% } %>
-			<tr>
-				<td></td>
-				<td><input type="text" id="playerName"  placeholder="Jméno hráče"></td>
-				
-				<td></td>
-				<td></td>
-				
-				<td></td>
-				<td></td>
-				
-				<td>
-					<div align="center">
-						<button id="removePlayerButton" onclick="addPlayer()">+</button>
-					</div>
-				</td>
-			</td>
-			</tr>
-		</table>
-		
-		<div align="center">
-			<button id="Start" onclick="startRound()">Start</button>
+				<% for (let i = 0; i < players.next_id; i++) { %>
+					<tr>
+						<td rowspan="2"><%= i %></td>
+						<td rowspan="2"><%= players[i].name %></td>
+						
+						<td><%= players[i].competitors[0].name %></td>
+						<td id="status-<%= players[i].competitors[0].result %>">
+						</td>
+						
+						<td rowspan="2"><%= players[i].points %></td>
+						<td rowspan="2"><%= players[i].result %></td>
+					</tr>
+					<tr>
+						<td><%= players[i].competitors[1].name %></td>
+						<td id="status-<%= players[i].competitors[1].result %>">
+						</td>
+					</tr>
+				<% } %>
+			</table>
 		</div>
-		
 		<script src="../js/main.js"></script>
 	</body>
 </html>

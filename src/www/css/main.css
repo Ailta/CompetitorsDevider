@@ -1,0 +1,95 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	margin: 0px;
+	padding-bottom: auto;
+	font-family: neo-sans, sans-serif;
+	background-color: rgb(21,30,34);
+}
+
+header {
+	position: absolute;
+	bottom: 70%;
+	top: 0;
+	right: 0;
+	left: 0;
+	margin: 0px;
+	padding-top: 5vh;
+	padding-bottom: 5vh;
+	
+	background: linear-gradient(0deg, rgba(21,30,34,1) 25%, rgba(4,47,64,1) 85%);
+}
+header > div > img {
+	height: 20vh;
+}
+
+body > div {
+	position: absolute;
+	bottom: 0;
+	top: 30%;
+	right: 0;
+	left: 0;
+	background-color: white;
+	
+	padding-top: 10vh;
+	padding-bottom: auto;
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
+
+h1 {
+	margin: 0px;
+}
+
+table {
+	text-align: center;
+	margin-top: 5vh;
+}
+
+nav {
+	text-align: center;
+}
+
+a {
+	margin-bottom: 2px;
+	display: inline-block;
+	padding: 5px 10px;
+	background-color: #cc302e;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	border: 2px solid #cc302e;
+	transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+  background-color: #b32b29;
+  color: #fff;
+}
+
+#status-Win {
+	background-color: green;
+}
+
+#status-Lost {
+	background-color: red;
+}
+
+.status {
+	cursor: pointer;
+}
+
+.full-width-button {
+	cursor: pointer;
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	margin: 0;
+	box-sizing: border-box;
+	background-color: transparent;
+	border: 0;
+	color: black;
+}

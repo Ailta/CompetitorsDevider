@@ -1,0 +1,69 @@
+{
+	"0": {
+		"name": "1.kolo",
+		"data": {
+			"0": {
+				"name": "Test",
+				"competitors": {
+					"0": {
+						"name": "Test3",
+						"result": "Lost"
+					},
+					"1": {
+						"name": "Test4",
+						"result": "Win"
+					}
+				},
+				"points": 1,
+				"result": "2. Fáze"
+			},
+			"1": {
+				"name": "Test2",
+				"competitors": {
+					"0": {
+						"name": "Test4",
+						"result": "Lost"
+					},
+					"1": {
+						"name": "Test3",
+						"result": "Lost"
+					}
+				},
+				"points": 0,
+				"result": "Ne"
+			},
+			"2": {
+				"name": "Test3",
+				"competitors": {
+					"0": {
+						"name": "Test2",
+						"result": "Win"
+					},
+					"1": {
+						"name": "Test",
+						"result": "Win"
+					}
+				},
+				"points": 2,
+				"result": "Play-Off"
+			},
+			"3": {
+				"name": "Test4",
+				"competitors": {
+					"0": {
+						"name": "Test",
+						"result": "Lost"
+					},
+					"1": {
+						"name": "Test2",
+						"result": "Win"
+					}
+				},
+				"points": 1,
+				"result": "2. Fáze"
+			},
+			"next_id": 4
+		}
+	},
+	"next_id": 1
+}

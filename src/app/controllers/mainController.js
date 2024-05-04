@@ -4,6 +4,10 @@ exports.index = (req, res) => {
 	res.render('root/index', {players: modelPlayers.getPlayers()});
 }
 
+exports.edit = (req, res) => {
+	res.render('root/edit', {players: modelPlayers.getPlayers()});
+}
+
 exports.addPlayer = (req) => {
 	modelPlayers.addPlayer(req.body.playerName);
 }

@@ -21,11 +21,11 @@ exports.addPlayer = (playerName) => {
 		"competitors": {
 			"0": {
 				"name": "",
-				"result": false
+				"result": "noResult"
 			},
 			"1": {
 				"name": "",
-				"result": false
+				"result": "noResult"
 			}
 		},
 		"points": 0,
@@ -97,6 +97,10 @@ exports.startRound = () => {
 				break;
 			}
 			
+			player.points = 0;
+			player.competitors[0].result = "noResult";
+			player.competitors[1].result = "noResult";
+			
 			let competitor = db.get(getPlayerId(players[i]));
 			
 			competitor.competitors[1].name = player.name;
@@ -155,12 +159,21 @@ exports.changeState = (playerId, competitorId) => {
 	
 	if (playerId < next_id){
 		let player = db.get(playerId);
-		player.competitors[competitorId].result = !player.competitors[competitorId].result;
-		player = countPoints(player, competitorId);
 		
 		let competitorDbId = getPlayerId(player.competitors[competitorId].name);
 		let competitor = db.get(competitorDbId);
-		competitor.competitors[1].result = !player.competitors[competitorId].result;
+		
+		switch (player.competitors[competitorId].result){
+			case "Win":
+				player.competitors[competitorId].result = "Lost";
+				competitor.competitors[1].result = "Win";
+				break;
+			default:
+				player.competitors[competitorId].result = "Win";
+				competitor.competitors[1].result = "Lost";
+		}
+		
+		player = countPoints(player, competitorId);
 		competitor = countPoints(competitor, 1);
 		
 		console.log(player);
@@ -199,11 +212,11 @@ function countPoints(player, competitorId) {
 	}*/
 	
 	// Redundant solution
-	if (player.competitors[0].result && player.competitors[1].result){
+	if (player.competitors[0].result == "Win" && player.competitors[1].result == "Win"){
 		player.result = "Play-Off";
 		player.points = 2;
-	} else if (!player.competitors[0].result && player.competitors[1].result || 
-				player.competitors[0].result && !player.competitors[1].result){
+	} else if (player.competitors[0].result != "Win" && player.competitors[1].result == "Win" || 
+				player.competitors[0].result == "Win" && player.competitors[1].result != "Win"){
 		player.result = "2. Fáze";
 		player.points = 1;
 	} else {

@@ -4,6 +4,8 @@ const mainController = require('../controllers/mainController');
 
 mainRouter.get(['/', '/index'], mainController.index);
 
+mainRouter.get(['/edit'], mainController.edit);
+
 mainRouter.post('/addPlayer', (req, res) => {
 	mainController.addPlayer(req);
 	
