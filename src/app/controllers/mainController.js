@@ -29,6 +29,9 @@ exports.changeState = (req, res) => {
 }
 
 exports.saveRound = (req, res) => {
-	console.log(req.body);
 	res.send(modelPlayers.saveRound(req.body.nameOfSave));
+}
+
+exports.clearData = (req, res) => {
+	res.send(modelPlayers.clearData());
 }

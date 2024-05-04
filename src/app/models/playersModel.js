@@ -251,3 +251,22 @@ exports.saveRound = (nameOfSave) => {
 
 	return true;
 }
+
+exports.clearData = () => {
+	const db = new jsondb('../data/results.json');
+	if (!db.has('next_id')) {
+    db.set('next_id', 0);
+	}
+	let next_id = db.get('next_id');
+
+	console.log('test');
+
+	for (let i = 0; i < next_id; i++){
+		db.delete(i);
+	}
+	db.set('next_id', 0);
+	
+	db.sync();
+
+	return true;
+}

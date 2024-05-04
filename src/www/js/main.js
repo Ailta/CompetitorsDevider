@@ -115,3 +115,25 @@ function saveRound() {
 		console.error('Error:', error);
 	});
 }
+
+function clearData() {
+	if (window.confirm("Jsi si jistý že chceš smazat všechny uložené kola?")){
+		fetch('/clearData', {
+			method: 'POST',
+			headers: {
+				"Content-Type": "application/json",
+			  },
+			body: JSON.stringify({ "clearData": true })
+		})
+		.then(response => response.text())
+		.then(data => {
+			console.log(data);
+			if (data){
+				location.reload();
+			}
+		})
+		.catch(error => {
+			console.error('Error:', error);
+		});
+	}
+}

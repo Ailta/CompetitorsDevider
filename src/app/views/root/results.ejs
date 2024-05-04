@@ -20,6 +20,10 @@
 				</nav> 
 			</header>
 			<div>
+				<div align="Center">
+					<button class="button" onclick="clearData()">Smazat</button>
+				</div>
+			
 				<% for (let x = 0; x < rounds.next_id; x++) {%>
 					<div align="center">
 						<label><%= rounds[x].name %></label>

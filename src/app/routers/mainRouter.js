@@ -32,6 +32,10 @@ mainRouter.post('/saveRound', (req, res) => {
 	mainController.saveRound(req, res);
 });
 
+mainRouter.post('/clearData', (req, res) => {
+	mainController.clearData(req, res);
+});
+
 mainRouter.get('*', (req, res) => {
 	res.send('Error 404');
 });
