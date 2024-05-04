@@ -2,6 +2,8 @@
 
 ## Jak stáhnout, nainstalovat a spustit
 
+Otázky směrovat na Calven.
+
 ### Stáhnutí
 Takhle se stáhne.
 ![image](https://github.com/Ailta/CompetitorsDevider/assets/29490877/57bdb8fe-3eed-473d-8ec6-2503ec381e74)
