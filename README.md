@@ -2,13 +2,14 @@
 
 ## Jak stáhnout, nainstalovat a spustit
 
+### Stáhnutí
 Takhle se stáhne.
 ![image](https://github.com/Ailta/CompetitorsDevider/assets/29490877/57bdb8fe-3eed-473d-8ec6-2503ec381e74)
 Pak stačí jen extrahovat.
 
 
 Tady se to rozdělí na dva způsoby jak to nainstalovat a spustit.
-**1.**
+### 1. Způsob Instalace a spuštění
 Toto je automatizovanější způsob instalace a spuštění.
 Druhý existuje pro to kdyby to nešlo automaticky.
 
@@ -25,7 +26,7 @@ npm run dev`
 ![image](https://github.com/Ailta/CompetitorsDevider/assets/29490877/761753d8-a53c-4f46-98f1-926b5ea6f186)
 
 
-**2.**
+### 2.Způsob Instalace a spuštění
 Kdyby z nějakého důvodu ten první způsob nešel, tak se to musí udělat více manuálně.
 1. Spusťte soubor s názvem: node-v22.1.0-x64.msi
 2. Jen to odklikejte, stačí klikat na next a pak install.
@@ -35,6 +36,6 @@ Kdyby z nějakého důvodu ten první způsob nešel, tak se to musí udělat v�
 
 5. Otevře se příkazová řádka, tam jen stačí napsat "npm install" a pak "npm run dev".
 
-
+### Konec
 A na konec, v konzoli se vypíše > http://localhost:6060
 To pak stačí dát do prohlížeče a hotovo.
