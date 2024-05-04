@@ -31,6 +31,8 @@ Kdyby z nějakého důvodu ten první způsob nešel, tak se to musí udělat v�
 2. Jen to odklikejte, stačí klikat na next a pak install.
 3. Po instalaci node.js je potřeba nainstalovat balíčky.
 4. Stačí vlízt do adresáře src a nahoře jak je cesta do adresáře tak tam stačí kliknout a napsat "/cmd".
+![image](https://github.com/Ailta/CompetitorsDevider/assets/29490877/eeab511a-65e9-4fcc-9e87-0c1aaba56492)
+
 5. Otevře se příkazová řádka, tam jen stačí napsat "npm install" a pak "npm run dev".
 
 
