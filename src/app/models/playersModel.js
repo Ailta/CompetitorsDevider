@@ -37,8 +37,6 @@ exports.addPlayer = (playerName) => {
 	db.set('next_id', playerId-(-1));
 	
 	db.sync(); // Save changes to disk
-	
-	console.log(playerName)
 }
 
 exports.removePlayer = (playerId) => {
@@ -176,9 +174,6 @@ exports.changeState = (playerId, competitorId) => {
 		player = countPoints(player, competitorId);
 		competitor = countPoints(competitor, 1);
 		
-		console.log(player);
-		console.log(competitor);
-		
 		db.set(playerId, player);
 		db.set(competitorDbId, competitor);
 		
@@ -258,8 +253,6 @@ exports.clearData = () => {
     db.set('next_id', 0);
 	}
 	let next_id = db.get('next_id');
-
-	console.log('test');
 
 	for (let i = 0; i < next_id; i++){
 		db.delete(i);
