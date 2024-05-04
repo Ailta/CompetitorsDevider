@@ -52,6 +52,6 @@ Stránka má tři části.
 2. Všechny výsledky, to zobrazí uložené výsledky kol.
 3. Upravit, tato stránka slouží k moderaci momentálního kola, lze zde přidat hráč či ho odebrat.
    Pro zahájení kola stačí kliknout na tlačítko *"Začít nové kolo"*. To náhodně vybere každému hráčovi nějakého protivníka.
-   Pro uložení výsledků stačí kliknout na tlačítko *"Change"*. Červená znamená že hráč prohrál s protivníkem a na opak.
+   Pro uložení výsledků stačí kliknout na tlačítko *"Change"*. Červená znamená že hráč prohrál s protivníkem a naopak.
    Body a postup se počítá automaticky, takže není třeba do toho nějak zasahovat.
    Pro uložení kola stačí napsat nějaký název a zmáčknout talčítko *"Uložit"*, pak se to kolo zobrazí ve *"Všechny výsledky"*.
