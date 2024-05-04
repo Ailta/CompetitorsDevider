@@ -22,8 +22,10 @@ npm install
 Až se vám ukáže světlé okno, tak stačí klikat na next a pak install.
 
 2.Pak stačí jen spustit run.bat který obsahuje tyto příkazi:
-```cd ./src/
-npm run dev```
+```
+cd ./src/
+npm run dev
+```
 
 ![image](https://github.com/Ailta/CompetitorsDevider/assets/29490877/761753d8-a53c-4f46-98f1-926b5ea6f186)
 
