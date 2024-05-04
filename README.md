@@ -33,8 +33,8 @@ npm run dev
 ### 2.Způsob Instalace a spuštění
 Kdyby z nějakého důvodu ten první způsob nešel, tak se to musí udělat více manuálně.
 1. Spusťte soubor *node-v22.1.0-x64.msi*
-2. Jen to odklikejte, stačí klikat na next a pak install.
-3. Po instalaci *node.js* je potřeba nainstalovat balíčky.
+   Jen to odklikejte, stačí klikat na next a pak install.
+   Po instalaci *node.js* je potřeba nainstalovat balíčky.
 4. Stačí vlízt do adresáře src a nahoře jak je cesta do adresáře tak tam stačí kliknout a napsat za to vše "/cmd".
 ![image](https://github.com/Ailta/CompetitorsDevider/assets/29490877/eeab511a-65e9-4fcc-9e87-0c1aaba56492)
 
@@ -44,3 +44,14 @@ Kdyby z nějakého důvodu ten první způsob nešel, tak se to musí udělat v�
 ### Konec
 A na konec, v konzoli se vypíše > http://localhost:6060
 To pak stačí dát do prohlížeče a hotovo.
+
+## Jak funguje?
+
+Stránka má tři části.
+1. Momentální výsledky, ty zobrazují stav momentálního kola, je potřeba obnovit stránku pro nejnovější data.
+2. Všechny výsledky, to zobrazí uložené výsledky kol.
+3. Upravit, tato stránka slouží k moderaci momentálního kola, lze zde přidat hráč či ho odebrat.
+   Pro zahájení kola stačí kliknout na tlačítko *"Začít nové kolo"*. To náhodně vybere každému hráčovi nějakého protivníka.
+   Pro uložení výsledků stačí kliknout na tlačítko *"Change"*. Červená znamená že hráč prohrál s protivníkem a na opak.
+   Body a postup se počítá automaticky, takže není třeba do toho nějak zasahovat.
+   Pro uložení kola stačí napsat nějaký název a zmáčknout talčítko *"Uložit"*, pak se to kolo zobrazí ve *"Všechny výsledky"*.
